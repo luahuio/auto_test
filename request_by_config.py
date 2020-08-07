@@ -1,9 +1,10 @@
 #coding:utf-8
+#使用配置文件遍历用例执行接口请求，并返回请求结果
 import requests
 import json
-
+#配置文件地址:/Users/hui/Downloads/config.json
 def req_by_config():
-    js_path='/Users/hui/Downloads/config.json'
+    js_path=input("请输入配置文件路径：")
     with open(js_path,'r') as f:
         cases=json.loads(f.read())
         for key,value in cases.items():
